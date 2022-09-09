@@ -1,5 +1,5 @@
 
-
+##Design der SQL DB
 class Note:
     def __init__(self, id, data, date, user_id):
         self.id = id

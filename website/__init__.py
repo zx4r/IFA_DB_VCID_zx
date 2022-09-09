@@ -6,7 +6,7 @@ from website.models import User, Note
 
 ####SQL DB wird erstellt
 app = Flask(__name__)  
-
+###SQL Connection Settings
 mysql = MySQL()
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'

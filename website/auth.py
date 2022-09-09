@@ -10,6 +10,7 @@ from .models import User
 
 auth = Blueprint('auth', __name__)
 
+##Route für Logout mit Bedingungen
 @auth.route('/logout')
 def logout():
     session['loggedin'] = False

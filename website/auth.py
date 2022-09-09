@@ -17,6 +17,7 @@ def logout():
     session['email'] = None
     return redirect(url_for('auth.login'))
 
+##Route zum login wird gesetz
 @auth.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':

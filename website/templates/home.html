@@ -1,0 +1,21 @@
+{% extends "base.html" %} {% block title %}Gästebuch{% endblock %} {% block content
+%}
+<h1 style="text-align: center">Dein Gästebuch Beitrag</h1>
+<ul class="list-group list-group-flush" id="notes">
+  {% for note in noteAllList %}
+  <li class="list-group-item">
+    {{ note.Data }}
+    <button type="button" class="close" onClick="deleteNote({{ note.Id }})">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </li>
+  {% endfor %}
+</ul>
+<form method="POST">
+  <textarea name="note" id="note" class="form-control"></textarea>
+  <br />
+  <div style="text-align: center">
+    <button type="submit" class="btn btn-primary">Füge deinen Gästebeitrag hinzu</button>
+  </div>
+</form>
+{% endblock %}
